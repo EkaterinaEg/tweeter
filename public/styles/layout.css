@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -18,8 +20,17 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: "Source Sans 3", sans-serif;
+  background-color: #6bbdb5;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+/* Note: the Bungee font should apply to the Tweeter logo in the nav). */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}

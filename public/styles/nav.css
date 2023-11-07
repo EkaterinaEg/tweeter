@@ -1,0 +1,26 @@
+.nav {
+  position: fixed;
+  width: 100vw;
+  height: 120px;
+  padding: 0 1.5em;
+  background-color: #4056a1;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  font-family: "Bungee", sans-serif;
+  /* font-weight: bold; */
+}
+.nav__right-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav__text {
+  margin: 0;
+}
+.nav__icon {
+  color: rgba(255, 0, 0, 0.57);
+}

@@ -1,0 +1,31 @@
+.new-tweet {
+  margin: 30px auto;
+}
+.tweet-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.tweet-text_textarea {
+  border: none;
+  border-bottom: 2px solid;
+  background-color: #6bbdb5;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+  width: 100%;
+}
+.form-tweet__summary-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", sans-serif;
+}
+.summary-group__button {
+  background-color: #4056a1;
+  color: #ffffff;
+  border: none;
+  /* font-family: "Bungee", sans-serif; */
+}
+
+.lenBelowZero {
+  color: red;
+}
