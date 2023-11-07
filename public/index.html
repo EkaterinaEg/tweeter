@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -57,7 +58,7 @@
     </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <article class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" class="form-tweet">
           <div class="form-tweet__tweet-text tweet-text">
@@ -82,7 +83,27 @@
             >
           </div>
         </form>
-      </section>
+      </article>
+      <article class="tweet">
+        <header class="tweet__header">
+          <div class="tweet__pic">
+            <i class="pic__icon fa-solid fa-circle-user"></i>
+            <p class="pic__nik">Newton</p>
+          </div>
+          <p class="tweet__user-name">@SirIsaac</p>
+        </header>
+        <main>
+          <p class="tweet__text">Tweeter text</p>
+        </main>
+        <footer class="tweet__footer">
+          <div class="footer__date">10 days ago</div>
+          <div class="footer__action">
+            <i class="action__icon fa-solid fa-flag"></i>
+            <i class="action__icon fa-solid fa-retweet"></i>
+            <i class="action__icon fa-solid fa-heart"></i>
+          </div>
+        </footer>
+      </article>
     </main>
     <script src="./scripts/composer-char-counter.js"></script>
   </body>
