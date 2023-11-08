@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: start;
 }
-.tweet-text_textarea {
+.tweet-text__textarea {
   border: none;
   border-bottom: 3px solid #545149;
   background-color: #6bbdb5;
@@ -33,6 +33,17 @@ button:hover {
   box-shadow: 5px 5px 10px 0px #545149;
 }
 
-.lenBelowZero {
+.warningTextArea {
   color: red;
+}
+.error-message {
+  color: #545149;
+  font-weight: bold;
+  border: 3px solid red;
+  /* border: 3px solid #545149; */
+  border-radius: 5px;
+  display: none;
+}
+.hidden {
+  display: none;
 }

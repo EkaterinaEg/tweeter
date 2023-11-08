@@ -16,13 +16,6 @@
       href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -34,8 +27,16 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
   <body>
@@ -61,12 +62,16 @@
       <article class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" class="form-tweet">
+          <p class="error-message error-message_empty">Cannot be empty</p>
+          <p class="error-message error-message_length">
+            Maximum length is 140 characters
+          </p>
           <div class="form-tweet__tweet-text tweet-text">
             <label class="tweet-text__label" for="tweet-text"
               >What are you humming about?</label
             >
             <textarea
-              class="tweet-text_textarea"
+              class="tweet-text__textarea"
               name="text"
               id="tweet-text_textarea"
             ></textarea>
