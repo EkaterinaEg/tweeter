@@ -1,36 +1,5 @@
-// const createTweetElementbad = function (tweetsObj) {
-//   let days = Math.floor(
-//     (Date.now() - `${tweetsObj["created_at"]}`) / (1000 * 60 * 60 * 24)
-//   );
-//   return `<article class="tweet">
-//   <header class="tweet__header">
-//     <div class="tweet__pic">
-//       <img src=${tweetsObj.user.avatars}>
-//       <p class="pic__name">${tweetsObj.user.name}</p>
-//     </div>
-//     <p class="tweet__user-handle">${tweetsObj.user.handle}</p>
-//   </header>
-//   <main>
-//     <p class="tweet__text">${tweetsObj.content.text}</p>
-//   </main>
-//   <footer class="tweet__footer">
-//     <div class="footer__date">${
-//       days > 1 ? days + " days" : days + " day"
-//     } ago </div>
-//     <div class="footer__action">
-//       <i class="action__icon fa-solid fa-flag"></i>
-//       <i class="action__icon fa-solid fa-retweet"></i>
-//       <i class="action__icon fa-solid fa-heart"></i>
-//     </div>
-//   </footer>
-// </article>`;
-// };
 $(document).ready(function () {
   const createTweetElement = function (tweetsObj) {
-    // let days = Math.floor(
-    //   (Date.now() - `${tweetsObj["created_at"]}`) / (1000 * 60 * 60 * 24)
-    // );
-
     const $article = $("<article>");
     $article.addClass("tweet");
 
@@ -69,7 +38,6 @@ $(document).ready(function () {
     const $icon3 = $("<i>");
     $icon3.addClass("action__icon fa-solid fa-heart");
 
-    $(".container").append($article);
     $article.append($header);
     $article.append($main);
     $article.append($footer);
@@ -93,17 +61,7 @@ $(document).ready(function () {
   const renderTweets = function (tweets) {
     $.each(tweets, function (index, tweet) {
       const newTweet = createTweetElement(tweet);
-      $(".container").append(newTweet);
-    });
-  };
-
-  const checkTweetText = function (form, error) {
-    $(form).on("input", function () {
-      if (!$(form) || $(form).val().length > 140) {
-        $(form).slideDown("slow");
-      } else {
-        error.hide();
-      }
+      $(".tweets__wrapper").prepend(newTweet);
     });
   };
 
@@ -111,7 +69,7 @@ $(document).ready(function () {
     event.preventDefault();
 
     // validation of form
-    const textArea = $(".tweet-text__textarea");
+    const textArea = $(".tweet-content__textarea");
     const error_length = $(".error-message_length");
     const error_empty = $(".error-message_empty");
 
@@ -124,37 +82,19 @@ $(document).ready(function () {
     } else {
       error_length.hide();
       error_empty.hide();
-    }
 
-    const formData = $(event.currentTarget).serialize();
-    // $(".tweet-text_textarea").on("input", function () {
-    //   $emptyError.hide();
-    // });
+      const formData = $(event.currentTarget).serialize();
 
-    // const $button = $(".summary-group__button");
-    // $button.on("click", function () {
-    $.ajax({
-      method: "POST",
-      data: formData,
-      url: "/tweets",
-    })
-      .done((response) => {
-        // Handle a successful response here (e.g., display the new tweet).
+      $.ajax({
+        method: "POST",
+        data: formData,
+        url: "/tweets",
       })
-      .fail((error) => {
-        // Handle AJAX request errors here.
-        console.error(error);
-      });
-    // .then((newTweet) => {
-    //   console.log(newTweet);
-    // $.get("http://localhost:8080/tweets").then((tweets) => {
-    //   const tweet = createTweetElement(newTweet, tweets);
-    // });
-    // $(".container").prepend(tweet);
-
-    // renderTweets(newdata);
-    // })
-    // .catch((err) => console.log(err));
+        .then(() => {
+          loadTweets();
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   $(".form-tweet").on("submit", handleSubmit);
@@ -165,9 +105,12 @@ $(document).ready(function () {
       url: "/tweets",
     })
       .then((res) => {
+        $(".tweets__wrapper").text("");
         renderTweets(res);
+        $(".tweet-content__textarea").val("");
       })
       .catch((err) => console.log(err));
   };
+
   loadTweets();
 });

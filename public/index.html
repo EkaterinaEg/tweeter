@@ -62,16 +62,16 @@
       <article class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" class="form-tweet">
-          <p class="error-message error-message_empty">Cannot be empty</p>
-          <p class="error-message error-message_length">
-            Maximum length is 140 characters
-          </p>
-          <div class="form-tweet__tweet-text tweet-text">
+          <div class="form-tweet__tweet-content tweet-content">
             <label class="tweet-text__label" for="tweet-text"
               >What are you humming about?</label
             >
+            <p class="error-message error-message_empty">🛑Cannot be empty🛑</p>
+            <p class="error-message error-message_length">
+              🛑Maximum length is 140 characters🛑
+            </p>
             <textarea
-              class="tweet-text__textarea"
+              class="tweet-content__textarea"
               name="text"
               id="tweet-text_textarea"
             ></textarea>
@@ -82,13 +82,14 @@
             </button>
             <output
               name="counter"
-              class="counter summary-group__ouput"
+              class="counter summary-group__output"
               for="tweet-text"
               >140</output
             >
           </div>
         </form>
       </article>
+      <ul class="tweets__wrapper"></ul>
     </main>
     <script src="./scripts/composer-char-counter.js"></script>
     <script src="./scripts/client.js"></script>

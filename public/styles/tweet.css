@@ -21,8 +21,9 @@
 .tweet__text {
   border-bottom: 3px solid #545149;
   text-align: left;
-  line-height: 2.5em;
+  line-height: 1.5em;
   margin-bottom: 0.5em;
+  word-break: break-all;
 }
 .tweet__footer {
   display: flex;
