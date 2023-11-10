@@ -1,5 +1,5 @@
 .new-tweet {
-  margin: 50px auto;
+  margin: 0 auto;
 }
 .pic__name {
   margin-left: 10px;
@@ -22,27 +22,28 @@
   justify-content: space-between;
   font-family: "Bungee", sans-serif;
 }
-
+.form-tweet {
+  margin-bottom: 50px;
+}
 .summary-group__button {
   background-color: #4056a1;
   color: #ffffff;
   border: none;
 }
-button:hover {
+.summary-group__button:hover {
   border: 2px solid #545149;
   box-shadow: 5px 5px 10px 0px #545149;
 }
 
 .error-message {
-  color: #545149;
   color: rgba(255, 0, 0, 0.57);
   font-weight: bold;
-  /* border: 3px solid red; */
-  /* border: 3px solid #545149; */
   border-radius: 5px;
   display: none;
 }
-
+.new-tweet {
+  display: none;
+}
 .tweets__wrapper {
   margin: 0;
   padding: 0;

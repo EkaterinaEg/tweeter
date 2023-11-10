@@ -3,6 +3,10 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
 
     <!-- External CSS -->
     <link
@@ -23,6 +27,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -37,6 +42,8 @@
     />
 
     <!-- App JS -->
+    <script src="./scripts/composer-char-counter.js"></script>
+    <script src="./scripts/client.js"></script>
   </head>
 
   <body>
@@ -45,25 +52,24 @@
       <p class="nav__logo">TWEETER</p>
       <div class="nav__right-block">
         <p class="nav__text"><strong>Write</strong> a new tweet</p>
-        <i class="nav__icon fa-solid fa-angles-down"></i>
+        <button class="nav__button">
+          <i class="nav__icon fa-solid fa-angles-down"></i>
+        </button>
       </div>
     </nav>
     <header class="header">
-      <div class="header__image">
-        <img src="/images/profile-hex.png" />
-      </div>
-      <!-- <br /> -->
-      <div>
-        <h2 class="header__title">Kate Egorova</h2>
+      <div class="header__person">
+        <div class="person-info">
+          <img class="person-info__image" src="/images/profile-hex.png" />
+          <h2 class="person-info__title">Kate Egorova</h2>
+        </div>
       </div>
     </header>
-    <!-- Page-specific (main) content here -->
     <main class="container">
       <article class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" class="form-tweet">
           <div class="form-tweet__tweet-content tweet-content">
-            <label class="tweet-text__label" for="tweet-text"
+            <label class="tweet-content__label" for="tweet-text"
               >What are you humming about?</label
             >
             <p class="error-message error-message_empty">🛑Cannot be empty🛑</p>
@@ -91,7 +97,5 @@
       </article>
       <ul class="tweets__wrapper"></ul>
     </main>
-    <script src="./scripts/composer-char-counter.js"></script>
-    <script src="./scripts/client.js"></script>
   </body>
 </html>

@@ -113,4 +113,9 @@ $(document).ready(function () {
   };
 
   loadTweets();
+
+  // STRETCH
+  $(".nav__button").on("click", function () {
+    $(".new-tweet").slideToggle("slow");
+  });
 });

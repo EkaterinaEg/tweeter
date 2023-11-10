@@ -21,6 +21,14 @@
 .nav__text {
   margin: 0;
 }
+.nav__button {
+  background: none;
+  border: none;
+}
+.nav__button:hover {
+  transform: translateY(10px);
+}
+
 .nav__icon {
   color: rgba(255, 0, 0, 0.57);
 }

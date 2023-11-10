@@ -1,10 +1,22 @@
 .header {
-  height: 520px;
-  width: 100vw;
+  /* height: 580px; */
+  margin: 0 auto;
+  padding-top: 200px;
+  padding: 200px 20px 0 20px;
+  /* margin-left: 20px; */
+  width: 40%;
   background-color: #6bbdb5;
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
   display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
+
+  justify-content: center;
+}
+.person-info {
+  padding: 2em;
+  background-color: rgba(255, 0, 0, 0.47);
+  text-align: center;
+  /* max-width: 80%; */
+}
+.person-info__image {
+  max-width: 100%;
 }

@@ -23,6 +23,7 @@ body {
   font-family: "Source Sans 3", sans-serif;
   background-color: #6bbdb5;
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+  display: flex;
 }
 
 /*
@@ -30,7 +31,8 @@ body {
  */
 /* Note: the Bungee font should apply to the Tweeter logo in the nav). */
 .container {
-  width: 90%;
+  padding: 200px 20px 30px 30px;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
 }
