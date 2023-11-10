@@ -17,11 +17,10 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: var(--main-text-color);
   font-size: 24px;
   font-family: "Source Sans 3", sans-serif;
-  background-color: #6bbdb5;
+  background-color: var(--background-color);
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
   display: flex;
 }

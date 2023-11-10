@@ -11,8 +11,8 @@
 }
 .tweet-content__textarea {
   border: none;
-  border-bottom: 3px solid #545149;
-  background-color: #6bbdb5;
+  border-bottom: 3px solid var(--main-text-color);
+  background-color: var(--background-color);
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
   width: 100%;
 }
@@ -26,17 +26,17 @@
   margin-bottom: 50px;
 }
 .summary-group__button {
-  background-color: #4056a1;
-  color: #ffffff;
+  background-color: var(--nav-background);
+  color: var(--nav-color);
   border: none;
 }
 .summary-group__button:hover {
-  border: 2px solid #545149;
-  box-shadow: 5px 5px 10px 0px #545149;
+  border: 2px solid var(--main-text-color);
+  box-shadow: 5px 5px 10px 0px var(--main-text-color);
 }
 
 .error-message {
-  color: rgba(255, 0, 0, 0.57);
+  color: var(--warning-text-color);
   font-weight: bold;
   border-radius: 5px;
   display: none;
@@ -50,5 +50,5 @@
 }
 /* add class for counter */
 .warningTextArea {
-  color: rgba(255, 0, 0, 0.57);
+  color: var(--warning-text-color);
 }

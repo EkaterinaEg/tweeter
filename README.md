@@ -4,9 +4,9 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 
-!["Screenshot of login page"]()
-!["Screenshot of register page"]()
-!["Screenshot of Urls page"]()
+!["Screenshot of Desktop"](https://github.com/EkaterinaEg/tweeter/blob/master/public/docs/Tweeter_desktop.png)
+!["Screenshot of Tablet"](https://github.com/EkaterinaEg/tweeter/blob/master/public/docs/Tweeter_tablet.png)
+!["Screenshot of Mobile"](https://github.com/EkaterinaEg/tweeter/blob/master/public/docs/Tweeter_mobile.png)
 
 ## Technologies
 

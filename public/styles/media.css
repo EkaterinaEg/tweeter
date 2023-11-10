@@ -1,7 +1,6 @@
 @media only screen and (max-width: 1024px) {
   .header {
     width: 33%;
-    /* padding-left: 20px; */
   }
   .container {
     width: 67%;
@@ -16,9 +15,8 @@
   }
   .header {
     padding-top: 100px;
-    /* padding-left: 50px; */
     width: 100%;
-    background-color: rgba(255, 0, 0, 0.47);
+    background-color: var(--warning-text-color);
   }
   .person-info {
     padding: 0.5em;
@@ -30,7 +28,7 @@
     width: 100%;
   }
   .nav__icon {
-    color: #4056a1;
+    color: var(--nav-background);
   }
 }
 @media only screen and (max-width: 490px) {
@@ -43,9 +41,6 @@
   .tweet__header {
     flex-direction: column;
     flex-wrap: wrap;
-  }
-  .tweet__pic > img {
-    /* flex: 2; */
   }
   .tweet__user-handle {
     align-self: start;

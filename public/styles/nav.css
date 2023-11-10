@@ -3,15 +3,14 @@
   width: 100vw;
   height: 120px;
   padding: 0 1.5em;
-  background-color: #4056a1;
-  color: #ffffff;
+  background-color: var(--nav-background);
+  color: var(--nav-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .nav__logo {
   font-family: "Bungee", sans-serif;
-  /* font-weight: bold; */
 }
 .nav__right-block {
   display: flex;
@@ -30,5 +29,5 @@
 }
 
 .nav__icon {
-  color: rgba(255, 0, 0, 0.57);
+  color: var(--warning-text-color);
 }

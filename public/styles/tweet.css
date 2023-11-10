@@ -1,10 +1,10 @@
 .tweet {
   margin: 1em 0;
   padding: 0 0.5em;
-  border: 3px solid #545149;
+  border: 3px solid var(--main-text-color);
 }
 .tweet:hover {
-  box-shadow: 5px 5px 10px 0px #545149;
+  box-shadow: 5px 5px 10px 0px var(--main-text-color);
 }
 .tweet__header {
   display: flex;
@@ -19,7 +19,7 @@
   margin-right: 0.5em;
 }
 .tweet__text {
-  border-bottom: 3px solid #545149;
+  border-bottom: 3px solid var(--main-text-color);
   text-align: left;
   line-height: 1.5em;
   margin-bottom: 0.5em;
@@ -37,5 +37,5 @@
   margin: 0 7px;
 }
 .action__icon:hover {
-  color: rgba(255, 0, 0, 0.57);
+  color: var(--warning-text-color);
 }
