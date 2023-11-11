@@ -70,9 +70,6 @@
       <article class="new-tweet">
         <form method="POST" action="/tweets" class="form-tweet">
           <div class="form-tweet__tweet-content tweet-content">
-            <label class="tweet-content__label" for="tweet-text"
-              >What are you humming about?</label
-            >
             <p class="error-message error-message_empty">🛑Cannot be empty🛑</p>
             <p class="error-message error-message_length">
               🛑Maximum length is 140 characters🛑
@@ -81,6 +78,7 @@
               class="tweet-content__textarea"
               name="text"
               id="tweet-text_textarea"
+              placeholder="What are you humming about?"
             ></textarea>
           </div>
           <div class="form-tweet__summary-group summary-group">
