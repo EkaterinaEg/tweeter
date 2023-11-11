@@ -103,7 +103,7 @@ const createTweetElement = function (tweetsObj) {
     } else {
       errorLength.hide();
       errorEmpty.hide();
-    }
+    
 
     const formData = $(event.currentTarget).serialize();
 
@@ -119,7 +119,7 @@ const createTweetElement = function (tweetsObj) {
       })
         .catch((err) => console.log(err));
     }
-
+  }
     // open form for new tweet by clicking button in nav
   const navButtonHandler = function() {
     $(".nav__button").on("click", function () {
