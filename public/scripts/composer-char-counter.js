@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
   $("#tweet-text_textarea").on("input", countCharLeft);
 });
 
