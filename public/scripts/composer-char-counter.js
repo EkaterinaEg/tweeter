@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   $("#tweet-text_textarea").on("input", countCharLeft);
 });
 
@@ -14,7 +14,7 @@ const countCharLeft = function(e) {
 
   if (remainLength < 0) {
     $counter.addClass("warningTextArea");
-    return
-  } 
-    $counter.removeClass("warningTextArea");
-}
+    return;
+  }
+  $counter.removeClass("warningTextArea");
+};
