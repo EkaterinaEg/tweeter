@@ -81,7 +81,6 @@ const createTweetElement = function (tweetsObj) {
     })
       .then((res) => {
         renderTweets(res);
-        $(".tweet-content__textarea").val("");
       })
       .catch((err) => console.log(err));
   };
@@ -115,6 +114,8 @@ const createTweetElement = function (tweetsObj) {
       })
         .then(() => {
           loadTweets();
+          textArea.val("");
+          textArea.trigger('input')//update length of counter after new tweet post
       })
         .catch((err) => console.log(err));
     }
@@ -126,16 +127,15 @@ const createTweetElement = function (tweetsObj) {
     });
   }
 
-
-
-
   $(document).ready(function () {
 
     //upload tweets on page
   loadTweets();
 
+  // post new tweets
   $(".form-tweet").on("submit", handleSubmit);
 
+  // handler for nav button
   navButtonHandler();
 })
 
